@@ -1,0 +1,338 @@
+[
+  {
+    "stem": "real_visit1_normal_sinus",
+    "files": [
+      "real_visit1_normal_sinus.npy",
+      "real_visit1_normal_sinus.csv",
+      "real_visit1_normal_sinus.hdf5"
+    ],
+    "label": "Real Patient: Normal Sinus Rhythm (Age 51)",
+    "description": "Verified normal 12-lead ECG from Zenodo CODE-15% cohort. Narrow QRS, normal PR interval, isoelectric ST. Ground-truth: Normal=True, AF=False, LBBB=False, SB=False, ST=False, 1dAVb=False.",
+    "shape": [
+      4096,
+      12
+    ],
+    "sample_rate": 400,
+    "lead_names": [
+      "DI",
+      "DII",
+      "DIII",
+      "AVR",
+      "AVL",
+      "AVF",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6"
+    ],
+    "units": "mV (CODE-15% scale: volts x 1000)",
+    "dsp_measurements": {
+      "heart_rate": 68.0,
+      "qrs_ms": 100.0,
+      "pr_ms": 132.5,
+      "st_amp": 0.215,
+      "st_status": "Elevation",
+      "rr_irregularity": 0.018,
+      "measurable": true
+    },
+    "expected_code15_flags": {
+      "1dAVb": false,
+      "RBBB": false,
+      "LBBB": false,
+      "SB": false,
+      "AF": false,
+      "ST": false,
+      "normal_ecg": true
+    },
+    "synthetic": false,
+    "zenodo_metadata": {
+      "exam_id": 214263,
+      "patient_id": 801634,
+      "age": 51.0,
+      "gender": "F",
+      "published_nn_predicted_age": 60.12
+    }
+  },
+  {
+    "stem": "real_visit2_af_and_lbbb_high_risk",
+    "files": [
+      "real_visit2_af_and_lbbb_high_risk.npy",
+      "real_visit2_af_and_lbbb_high_risk.csv",
+      "real_visit2_af_and_lbbb_high_risk.hdf5"
+    ],
+    "label": "Real Patient: Atrial Fibrillation with LBBB (Age 82)",
+    "description": "Severe dual conduction disturbance: Left bundle branch block (prolonged QRS) accompanied by atrial fibrillation. Ground-truth: Normal=False, AF=True, LBBB=True, SB=False, ST=False, 1dAVb=False.",
+    "shape": [
+      4096,
+      12
+    ],
+    "sample_rate": 400,
+    "lead_names": [
+      "DI",
+      "DII",
+      "DIII",
+      "AVR",
+      "AVL",
+      "AVF",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6"
+    ],
+    "units": "mV (CODE-15% scale: volts x 1000)",
+    "dsp_measurements": {
+      "heart_rate": 55.8,
+      "qrs_ms": 167.5,
+      "pr_ms": null,
+      "st_amp": 0.316,
+      "st_status": "Elevation",
+      "rr_irregularity": 0.104,
+      "measurable": true
+    },
+    "expected_code15_flags": {
+      "1dAVb": false,
+      "RBBB": false,
+      "LBBB": true,
+      "SB": false,
+      "AF": true,
+      "ST": false,
+      "normal_ecg": false
+    },
+    "synthetic": false,
+    "zenodo_metadata": {
+      "exam_id": 2999852,
+      "patient_id": 1727659,
+      "age": 82.0,
+      "gender": "M",
+      "published_nn_predicted_age": 84.55
+    }
+  },
+  {
+    "stem": "real_visit3_bradycardia_1davb",
+    "files": [
+      "real_visit3_bradycardia_1davb.npy",
+      "real_visit3_bradycardia_1davb.csv",
+      "real_visit3_bradycardia_1davb.hdf5"
+    ],
+    "label": "Real Patient: Sinus Bradycardia with 1st-deg AV Block (Age 68)",
+    "description": "Low resting rate with marked PR prolongation exceeding 200 ms representing 1st-degree atrioventricular delay. Ground-truth: Normal=False, AF=False, LBBB=False, SB=True, ST=False, 1dAVb=True.",
+    "shape": [
+      4096,
+      12
+    ],
+    "sample_rate": 400,
+    "lead_names": [
+      "DI",
+      "DII",
+      "DIII",
+      "AVR",
+      "AVL",
+      "AVF",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6"
+    ],
+    "units": "mV (CODE-15% scale: volts x 1000)",
+    "dsp_measurements": {
+      "heart_rate": 46.9,
+      "qrs_ms": 95.0,
+      "pr_ms": 215.0,
+      "st_amp": 0.328,
+      "st_status": "Elevation",
+      "rr_irregularity": 0.04,
+      "measurable": true
+    },
+    "expected_code15_flags": {
+      "1dAVb": true,
+      "RBBB": false,
+      "LBBB": false,
+      "SB": true,
+      "AF": false,
+      "ST": false,
+      "normal_ecg": false
+    },
+    "synthetic": false,
+    "zenodo_metadata": {
+      "exam_id": 741685,
+      "patient_id": 1750080,
+      "age": 68.0,
+      "gender": "F",
+      "published_nn_predicted_age": 72.1
+    }
+  },
+  {
+    "stem": "real_visit4_tachycardia_st",
+    "files": [
+      "real_visit4_tachycardia_st.npy",
+      "real_visit4_tachycardia_st.csv",
+      "real_visit4_tachycardia_st.hdf5"
+    ],
+    "label": "Real Patient: Sinus Tachycardia (Age 62)",
+    "description": "Elevated resting sinus rhythm exceeding 100 bpm without atrial fibrillation. Ground-truth: Normal=False, AF=False, LBBB=False, SB=False, ST=True, 1dAVb=False.",
+    "shape": [
+      4096,
+      12
+    ],
+    "sample_rate": 400,
+    "lead_names": [
+      "DI",
+      "DII",
+      "DIII",
+      "AVR",
+      "AVL",
+      "AVF",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6"
+    ],
+    "units": "mV (CODE-15% scale: volts x 1000)",
+    "dsp_measurements": {
+      "heart_rate": 103.4,
+      "qrs_ms": 75.0,
+      "pr_ms": 200.0,
+      "st_amp": 0.473,
+      "st_status": "Elevation",
+      "rr_irregularity": 0.011,
+      "measurable": true
+    },
+    "expected_code15_flags": {
+      "1dAVb": false,
+      "RBBB": false,
+      "LBBB": false,
+      "SB": false,
+      "AF": false,
+      "ST": true,
+      "normal_ecg": false
+    },
+    "synthetic": false,
+    "zenodo_metadata": {
+      "exam_id": 423730,
+      "patient_id": 1769456,
+      "age": 62.0,
+      "gender": "M",
+      "published_nn_predicted_age": 81.42
+    }
+  },
+  {
+    "stem": "real_multivisit_pat62825_visit1_exam179183",
+    "files": [
+      "real_multivisit_pat62825_visit1_exam179183.npy",
+      "real_multivisit_pat62825_visit1_exam179183.csv",
+      "real_multivisit_pat62825_visit1_exam179183.hdf5"
+    ],
+    "label": "Real Patient 62825: Visit 1 - Normal Baseline (Age 59)",
+    "description": "Baseline hospital visit for Patient 62825. Preserved rhythm, normal conduction, normal heart age (~61 yrs). Ground-truth: Normal=True, AF=False, LBBB=False, SB=False, ST=False, 1dAVb=False.",
+    "shape": [
+      4096,
+      12
+    ],
+    "sample_rate": 400,
+    "lead_names": [
+      "DI",
+      "DII",
+      "DIII",
+      "AVR",
+      "AVL",
+      "AVF",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6"
+    ],
+    "units": "mV (CODE-15% scale: volts x 1000)",
+    "dsp_measurements": {
+      "heart_rate": 57.6,
+      "qrs_ms": 90.0,
+      "pr_ms": 157.5,
+      "st_amp": 0.185,
+      "st_status": "Elevation",
+      "rr_irregularity": 0.019,
+      "measurable": true
+    },
+    "expected_code15_flags": {
+      "1dAVb": false,
+      "RBBB": false,
+      "LBBB": false,
+      "SB": false,
+      "AF": false,
+      "ST": false,
+      "normal_ecg": true
+    },
+    "synthetic": false,
+    "zenodo_metadata": {
+      "exam_id": 179183,
+      "patient_id": 62825,
+      "age": 59.0,
+      "gender": "F",
+      "published_nn_predicted_age": 61.44
+    }
+  },
+  {
+    "stem": "real_multivisit_pat62825_visit2_exam433650",
+    "files": [
+      "real_multivisit_pat62825_visit2_exam433650.npy",
+      "real_multivisit_pat62825_visit2_exam433650.csv",
+      "real_multivisit_pat62825_visit2_exam433650.hdf5"
+    ],
+    "label": "Real Patient 62825: Visit 2 - New-Onset AF (Age 60)",
+    "description": "Follow-up visit 1 year later for Patient 62825. Developed new-onset Atrial Fibrillation with a +9.2 year heart age surge. Ground-truth: Normal=False, AF=True, LBBB=False, SB=False, ST=False, 1dAVb=False.",
+    "shape": [
+      4096,
+      12
+    ],
+    "sample_rate": 400,
+    "lead_names": [
+      "DI",
+      "DII",
+      "DIII",
+      "AVR",
+      "AVL",
+      "AVF",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6"
+    ],
+    "units": "mV (CODE-15% scale: volts x 1000)",
+    "dsp_measurements": {
+      "heart_rate": 152.4,
+      "qrs_ms": 82.5,
+      "pr_ms": null,
+      "st_amp": -0.249,
+      "st_status": "Depression",
+      "rr_irregularity": 0.105,
+      "measurable": true
+    },
+    "expected_code15_flags": {
+      "1dAVb": false,
+      "RBBB": false,
+      "LBBB": false,
+      "SB": false,
+      "AF": true,
+      "ST": false,
+      "normal_ecg": false
+    },
+    "synthetic": false,
+    "zenodo_metadata": {
+      "exam_id": 433650,
+      "patient_id": 62825,
+      "age": 60.0,
+      "gender": "F",
+      "published_nn_predicted_age": 70.63
+    }
+  }
+]
